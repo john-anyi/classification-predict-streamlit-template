@@ -46,7 +46,7 @@ def main():
 
 	# Creating sidebar with selection box -
 	# you can create multiple pages this way
-	options = ["Prediction", "Information"]
+	options = ["Prediction", "Information", "Conclusion"]
 	selection = st.sidebar.selectbox("Choose Option", options)
 
 	# Building out the "Information" page
@@ -77,6 +77,9 @@ def main():
 			# You can use a dictionary or similar structure to make this output
 			# more human interpretable.
 			st.success("Text Categorized as: {}".format(prediction))
+	#Building the Conclusion page
+	if selection == "Conclusion":
+		st.info("Conclusion on the accepted model")
 
 # Required to let Streamlit instantiate our web app.  
 if __name__ == '__main__':
